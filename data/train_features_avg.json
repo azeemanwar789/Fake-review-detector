@@ -1,0 +1,20 @@
+{
+  "avg_features": {
+    "coord_num_coord_reviews": 0.0,
+    "coord_avg_time_diff": 0.0,
+    "coord_rating_var": 0.0,
+    "ling_avg_word_len": 4.5,
+    "ling_sentiment": 0.0,
+    "ling_vocab_rich": 0.5,
+    "ling_sentence_var": 0.0,
+    "temp_template_score": 0.0,
+    "temp_template_count": 0.0,
+    "emo_extreme_sent": 0.0,
+    "emo_excl_ratio": 0.02,
+    "emo_caps_ratio": 0.05,
+    "time_avg_interval": 0.0,
+    "time_burst_score": 0.0,
+    "burst_burst_count": 0.0,
+    "burst_max_burst": 0.0
+  }
+}

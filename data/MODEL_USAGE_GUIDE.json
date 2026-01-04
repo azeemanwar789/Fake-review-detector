@@ -1,0 +1,17 @@
+{
+  "model_files": {
+    "calibrated_fraud_system.pkl": "Main calibrated system (use this)",
+    "calibration_function.pkl": "Calibration function only",
+    "xgboost_fraud_detection_model.joblib": "Original XGBoost model",
+    "scaler.joblib": "Feature scaler",
+    "feature_names.json": "Feature names",
+    "tfidf_vectorizer.joblib": "TF-IDF vectorizer"
+  },
+  "usage_example": "\n        # HOW TO LOAD AND USE THE MODEL:\n        \n        import pickle\n        \n        # Load the calibrated system\n        with open('calibrated_fraud_system.pkl', 'rb') as f:\n            fraud_system = pickle.load(f)\n        \n        # Classify a review\n        result = fraud_system.classify(\n            review_text=\"This product is amazing!\",\n            summary=\"Great purchase\",\n            overall=5.0,\n            reviewer_id=\"user123\",\n            asin=\"product456\"\n        )\n        \n        print(f\"Classification: {result['classification']}\")\n        print(f\"Confidence: {result['confidence']:.4f}\")\n        print(f\"Flags: {result['flags']}\")\n        ",
+  "calibration_details": {
+    "rating_bias_correction": "Positive reviews (\u22654.0) spam probability reduced by 60%",
+    "overconfidence_correction": "Sigmoid smoothing applied",
+    "text_length_adjustment": "Very short reviews (<30 chars) get +0.2 spam probability",
+    "caps_adjustment": "High caps ratio (>0.4) gets +0.3 spam probability"
+  }
+}
